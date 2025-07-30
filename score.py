@@ -1,12 +1,16 @@
 from ursina import *
 
 score = 0
-score_text = Text(
-    text=f'Score: {score}',
-    position=(-0.8, 0.45),
-    scale=2,
-    color=color.white
-)
+score_text = None
+
+def init_score():
+    global score_text
+    score_text = Text(
+        text=f'Score: {score}',
+        position=(-0.8, 0.45),
+        scale=2,
+        color=color.white
+    )
 
 def add_score(amount):
     global score

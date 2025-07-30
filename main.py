@@ -7,6 +7,7 @@ from main_menu import MainMenu
 from map import MirageMap
 
 app = Ursina()
+score.init_score()
 
 def start_game():
     # Map
@@ -32,8 +33,8 @@ def start_game():
     )
 
     # Lighting
-    AmbientLight(color=color.rgba(100, 100, 100, 0.1))
-    DirectionalLight(color=color.rgba(100, 100, 100, 0.1), direction=(1, -1, 1))
+    AmbientLight()
+    DirectionalLight(direction=(1, -1, 1))
 
     # Sky
     Sky()
