@@ -33,7 +33,7 @@ class Player(Entity):
 
     def update(self):
         self.controller.camera_pivot.y = 2 - held_keys['left control']
-        if self.controller.velocity.length() > 0:
+        if self.controller.speed > 0:
             self.head.position = (0, 1.5 + sin(time.time() * 10) * 0.1, 0)
         else:
             self.head.position = (0, 1.5, 0)
